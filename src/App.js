@@ -102,7 +102,7 @@ class App extends Component {
       this.state.input)
       .then(response => {
         if(response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://murmuring-savannah-56076.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -159,7 +159,7 @@ class App extends Component {
             : (
                 route === 'signin'
                 ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-                : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+                : <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
               )        
         }
       </div>
